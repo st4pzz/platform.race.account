@@ -8,5 +8,3 @@ public record LoginIn(
     String email,
     String password
 ) { }
-
-// Path: platform
