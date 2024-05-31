@@ -1,2 +1,64 @@
 # platform.241.store.account
 
+## Descrição
+Este projeto é parte de uma plataforma de gerenciamento de contas em uma arquitetura de microserviços. Ele foi desenvolvido com foco em escalabilidade, flexibilidade e facilidade de manutenção.
+
+## Arquitetura
+A arquitetura do projeto utiliza uma abordagem de microserviços, onde cada componente é independente e comunicam-se entre si. As tecnologias principais utilizadas incluem Kubernetes, Jenkins e Docker Compose.
+
+## Tecnologias Utilizadas
+
+- **Kubernetes**: Para orquestração de contêineres e gerenciamento de serviços em escala.
+- **Jenkins**: Para integração contínua e entrega contínua (CI/CD).
+- **Docker Compose**: Para definir e gerenciar multi-contêineres Docker.
+- **React**: (considerado para o frontend).
+
+## Estrutura do Projeto
+
+```
+platform.race.account/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── example/
+│   │   │           └── account/
+│   │   │               ├── controller/
+│   │   │               ├── model/
+│   │   │               ├── repository/
+│   │   │               └── service/
+│   │   └── resources/
+│   └── test/
+├── Jenkinsfile
+├── docker-compose.yml
+├── README.md
+└── pom.xml
+```
+
+## Configuração e Execução
+
+### Pré-requisitos
+
+- Docker
+- Kubernetes
+- Jenkins
+
+### Passos para Configuração
+
+1. Clone o repositório:
+    ```bash
+    git clone https://github.com/st4pzz/platform.race.account.git
+    cd platform.race.account
+    ```
+
+2. Configure o Jenkins:
+    - Crie um pipeline e aponte para o arquivo `Jenkinsfile` deste repositório.
+
+3. Execute o Docker Compose para iniciar os serviços localmente:
+    ```bash
+    docker-compose up
+    ```
+
+4. Implemente no Kubernetes:
+    - Certifique-se de que seu cluster Kubernetes está configurado.
+    - Utilize os arquivos de configuração do Kubernetes presentes no repositório para implantar os serviços.
